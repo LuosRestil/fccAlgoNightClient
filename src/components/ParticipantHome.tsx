@@ -3,13 +3,13 @@ import React, { useState } from "react";
 function ParticipantHome() {
   const apiURL = 'http://localhost:5000/api/join'
 
-  const [name, setname] = useState("");
-  const [level, setlevel] = useState("");
-  const [xp, setxp] = useState("");
-  const [lang1, setlang1] = useState("")
-  const [lang2, setlang2] = useState("");
-  const [lang3, setlang3] = useState("");
-  const [langOther, setlangOther] = useState("");
+  const [name, setname] = useState<string>("");
+  const [level, setlevel] = useState<string>("");
+  const [xp, setxp] = useState<string>("");
+  const [lang1, setlang1] = useState<string>("");
+  const [lang2, setlang2] = useState<string>("");
+  const [lang3, setlang3] = useState<string>("");
+  const [langOther, setlangOther] = useState<string>("");
 
   const handleSubmit = (event: any): void => {
     event.preventDefault();
@@ -44,9 +44,9 @@ function ParticipantHome() {
     console.log(body);
   }
 
-  const handleChange = (event: any): void => {
-    let name = event.target.name;
-    let value = event.target.value;
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    let name: string = event.target.name;
+    let value: string = event.target.value;
     switch(name) {
       case "name":
         setname(value);
@@ -72,7 +72,6 @@ function ParticipantHome() {
       default:
         console.log();
     }
-    
   }
 
   return (
