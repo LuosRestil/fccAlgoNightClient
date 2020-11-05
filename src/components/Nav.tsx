@@ -9,7 +9,7 @@ function Nav() {
   return (
     <nav>
       <h3>FCC Nashville ADS</h3>
-      <ul className="nav-links">
+      {/* <ul className="nav-links">
         <Link style={navStyle} to="/admin">
           <li>thing 1</li>
         </Link>
@@ -17,7 +17,7 @@ function Nav() {
           <li>thing 2</li>
         </Link>
         
-      </ul>
+      </ul> */}
     </nav>
   )
 }

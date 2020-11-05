@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 const ViewParticipants: React.FC = () => {
   const [participants, setParticipants] = useState<IParticipant[] | []>([]);
@@ -14,7 +15,7 @@ const ViewParticipants: React.FC = () => {
   }
 
   return (
-    <div className="table-container">
+    <div className="participants-container">
       <table className="table">
         <thead>
           <tr>
@@ -57,6 +58,9 @@ const ViewParticipants: React.FC = () => {
           })}
         </tbody>
       </table>
+      <Link to="/admin/groups">
+        <button>Group Participants</button>
+      </Link>
     </div>
   )
 }
